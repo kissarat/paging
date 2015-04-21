@@ -7,8 +7,6 @@
 const limit = <?=$limit ?> ;
 $(function() {
    $('nav a').click(function(e) {
-       e.preventDefault();
-       e.defaultPrevented = true;
        var offset = (parseInt(this.innerHTML) - 1) * limit
        offset = '?offset=' + offset;
        $('tbody').load('page.php' + offset,
